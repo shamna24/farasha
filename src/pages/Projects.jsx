@@ -96,13 +96,16 @@ export default function Projects() {
   useEffect(() => {
     // Animate grid items on filter change
     if (gridRef.current) {
-      gsap.from(gridRef.current.querySelectorAll('.project-card'), {
-        y: 40,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: 'power3.out',
-      })
+      gsap.fromTo(gridRef.current.querySelectorAll('.project-card'), 
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: 'power3.out',
+        }
+      )
     }
   }, [activeFilter])
 
