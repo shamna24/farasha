@@ -9,24 +9,31 @@ gsap.registerPlugin(ScrollTrigger)
 const featuredProjects = [
   {
     id: 1,
-    title: 'Serenity Villa',
+    title: 'Modern Villa',
     category: 'Residential',
-    location: 'Malibu, CA',
-    image: '/images/hero-villa.png',
+    location: 'Client Project',
+    image: '/images/project-client-1.jpg',
   },
   {
     id: 2,
-    title: 'The Meridian',
-    category: 'Commercial',
-    location: 'Dubai, UAE',
-    image: '/images/project-commercial.png',
+    title: 'Luxury Estate',
+    category: 'Residential',
+    location: 'Client Project',
+    image: '/images/project-client-2.jpg',
   },
   {
     id: 3,
-    title: 'Horizon Retreat',
-    category: 'Resort',
-    location: 'Bali, Indonesia',
-    image: '/images/project-resort.png',
+    title: 'Urban Residence',
+    category: 'Urban',
+    location: 'Client Project',
+    image: '/images/project-client-3.jpg',
+  },
+  {
+    id: 4,
+    title: 'Serene Retreat',
+    category: 'Residential',
+    location: 'Client Project',
+    image: '/images/project-client-4.jpg',
   },
 ]
 
