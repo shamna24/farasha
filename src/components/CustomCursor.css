@@ -1,0 +1,49 @@
+.custom-cursor {
+  position: fixed;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: difference;
+}
+
+.sparkle-wrapper {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sparkle-icon {
+  width: 14px;
+  height: 14px;
+  background-color: var(--clr-accent);
+  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
+  animation: slow-spin 4s linear infinite;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-cursor.hovering .sparkle-wrapper {
+  transform: scale(2.5);
+}
+
+.custom-cursor.hovering .sparkle-icon {
+  background-color: #ffffff;
+  animation: slow-spin 2s linear infinite;
+}
+
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+}
