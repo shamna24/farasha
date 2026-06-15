@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="footer__contact-col">
           <h4 className="footer__col-title">Connect</h4>
           <a href="mailto:hello@farashadesign.com" className="footer__link">hello@farashadesign.com</a>
-          <a href="tel:+1234567890" className="footer__link">+1 (234) 567-890</a>
+          <a href="tel:+9719731151543" className="footer__link">+971 973 115 1543</a>
           <div className="footer__social">
             <a href="#" className="footer__social-link" aria-label="Instagram">IG</a>
             <a href="#" className="footer__social-link" aria-label="LinkedIn">LI</a>

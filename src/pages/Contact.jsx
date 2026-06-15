@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: '📞',
     title: 'Call Us',
-    lines: ['Main: +91 (22) 4567-8900', 'WhatsApp: +91 98765-43210', 'Mon–Fri: 9:00 AM – 6:00 PM IST'],
+    lines: ['Main: +971 973 115 1543', 'WhatsApp: +971 973 115 1543', 'Mon–Fri: 9:00 AM – 6:00 PM GST'],
   },
 ]
 
@@ -199,7 +199,7 @@ export default function Contact() {
                       id="phone"
                       name="phone"
                       className="form-input"
-                      placeholder="+91 98765 43210"
+                      placeholder="+971 973 115 1543"
                       value={formData.phone}
                       onChange={handleChange}
                     />
