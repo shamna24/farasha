@@ -35,8 +35,10 @@ export default function Navbar() {
       const tl = gsap.timeline()
       tlRef.current = tl
 
-      tl.to(overlayRef.current, {
+      tl.set(overlayRef.current, { visibility: 'visible', pointerEvents: 'auto' })
+        .to(overlayRef.current, {
         clipPath: 'circle(150% at top right)',
+        webkitClipPath: 'circle(150% at top right)',
         duration: 0.8,
         ease: 'power4.inOut',
       })
@@ -53,8 +55,12 @@ export default function Navbar() {
       if (tlRef.current) {
         gsap.to(overlayRef.current, {
           clipPath: 'circle(0% at top right)',
+          webkitClipPath: 'circle(0% at top right)',
           duration: 0.6,
           ease: 'power4.inOut',
+          onComplete: () => {
+            gsap.set(overlayRef.current, { visibility: 'hidden', pointerEvents: 'none' })
+          }
         })
       }
     }

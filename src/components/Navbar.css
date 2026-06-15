@@ -151,6 +151,9 @@
   background: var(--clr-bg-primary);
   z-index: 999;
   clip-path: circle(0% at top right);
+  -webkit-clip-path: circle(0% at top right);
+  visibility: hidden;
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,5 +210,17 @@
 
   .navbar__burger {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__brand-name {
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+  }
+  
+  .navbar__brand-sub {
+    font-size: 0.45rem;
+    letter-spacing: 0.35em;
   }
 }

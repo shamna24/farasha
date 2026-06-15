@@ -541,6 +541,10 @@
 }
 
 @media (max-width: 768px) {
+  .hero__content {
+    padding-top: 9.5rem;
+  }
+
   .hero__stats-bar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
