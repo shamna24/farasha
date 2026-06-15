@@ -78,8 +78,9 @@
 
 /* Grid */
 .projects-grid-section {
-  background: var(--clr-bg-primary);
+  background: var(--clr-bg-secondary);
   padding-top: var(--space-md);
+  padding-bottom: var(--space-xl);
 }
 
 .projects-grid {

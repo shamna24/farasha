@@ -117,6 +117,11 @@ img {
   height: auto;
 }
 
+/* Brighten the client project photos to improve visibility on dark theme */
+img[src*="project-client"] {
+  filter: brightness(1.45) contrast(1.15) saturate(1.1);
+}
+
 ul, ol {
   list-style: none;
 }
