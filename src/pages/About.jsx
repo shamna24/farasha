@@ -35,13 +35,6 @@ const team = [
   { name: 'Priya Sharma', role: 'Project Manager', initial: 'PS' },
 ]
 
-const milestones = [
-  { year: '2014', title: 'Studio Founded', desc: 'Farasha Design Studio was born with a vision to redefine exterior architecture.' },
-  { year: '2016', title: 'First Major Award', desc: 'Won the prestigious International Architecture Award for residential design.' },
-  { year: '2019', title: 'Global Expansion', desc: 'Opened offices in Dubai and Singapore, expanding our reach to new markets.' },
-  { year: '2022', title: '100+ Projects', desc: 'Reached a milestone of 100 completed projects across 6 countries.' },
-  { year: '2025', title: 'Sustainability Pledge', desc: 'Committed to 100% sustainable materials in all new projects by 2030.' },
-]
 
 export default function About() {
   const pageRef = useRef(null)
@@ -104,31 +97,6 @@ export default function About() {
         }
       })
 
-      // Timeline
-      gsap.from('.timeline-item', {
-        x: -60,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.about-timeline__list',
-          start: 'top 75%',
-        }
-      })
-
-      gsap.from('.about-timeline__line-fill', {
-        scaleY: 0,
-        duration: 2,
-        ease: 'power2.out',
-        transformOrigin: 'top',
-        scrollTrigger: {
-          trigger: '.about-timeline__list',
-          start: 'top 75%',
-          end: 'bottom 50%',
-          scrub: true,
-        }
-      })
 
       // Team
       gsap.from('.team-card', {
@@ -175,18 +143,6 @@ export default function About() {
           <div className="about-story__text">
             <span className="section-label">Our Story</span>
             <h2>Born from a<br /><em>passion</em> for form</h2>
-            <p>
-              Founded in 2014, Farasha Design Studio emerged from a shared belief 
-              that the spaces between buildings are just as important as the buildings 
-              themselves. Our name, "Farasha" — meaning butterfly in Arabic — reflects 
-              our commitment to transformation and beauty.
-            </p>
-            <p>
-              What began as a small studio of three passionate architects has grown into 
-              a team of 25+ professionals spanning architecture, landscape design, urban 
-              planning, and environmental engineering. Today, our work spans continents, 
-              but our philosophy remains the same: every exterior space should tell a story.
-            </p>
             <div className="about-story__highlight">
               <span className="about-story__highlight-num">25+</span>
               <span className="about-story__highlight-text">Creative professionals<br />shaping the future of exterior design</span>
@@ -214,30 +170,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="about-timeline section" id="about-timeline">
-        <div className="container">
-          <div className="about-timeline__header">
-            <span className="section-label">Our Journey</span>
-            <h2>Milestones</h2>
-          </div>
-          <div className="about-timeline__list">
-            <div className="about-timeline__line">
-              <div className="about-timeline__line-fill"></div>
-            </div>
-            {milestones.map((item, i) => (
-              <div key={i} className="timeline-item">
-                <span className="timeline-item__year">{item.year}</span>
-                <div className="timeline-item__dot"></div>
-                <div className="timeline-item__content">
-                  <h3 className="timeline-item__title">{item.title}</h3>
-                  <p className="timeline-item__desc">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Team */}
       <section className="about-team section" id="about-team">

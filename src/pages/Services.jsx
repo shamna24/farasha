@@ -6,48 +6,12 @@ import './Services.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const services = [
-  {
-    num: '01',
-    title: 'Exterior Design',
-    desc: 'We craft stunning building exteriors that make powerful first impressions. From residential masterpieces to commercial landmarks, our designs balance form, function, and context to create facades that tell compelling architectural stories.',
-    features: ['Conceptual Design', 'Material Selection', 'Color & Texture Studies', 'Environmental Integration'],
-    image: '/images/hero-villa.png',
-  },
-  {
-    num: '02',
-    title: 'Landscape Architecture',
-    desc: 'Our landscape architects create outdoor environments that breathe life into architecture. We design gardens, terraces, water features, and green spaces that complement the built environment and enhance the quality of life for inhabitants.',
-    features: ['Garden Design', 'Water Features', 'Hardscape Planning', 'Plant Curation'],
-    image: '/images/project-resort.png',
-  },
-  {
-    num: '03',
-    title: 'Facade Engineering',
-    desc: 'We push the boundaries of building envelope design with innovative materials, cutting-edge engineering, and a relentless focus on performance. Our facades are both art and science — beautiful, durable, and energy-efficient.',
-    features: ['Curtain Wall Systems', 'Cladding Design', 'Thermal Analysis', 'Structural Integration'],
-    image: '/images/project-commercial.png',
-  },
-  {
-    num: '04',
-    title: 'Urban Planning',
-    desc: 'We design holistic urban experiences that foster community and culture. Our urban planning practice creates connected, walkable, and vibrant districts that respect heritage while embracing the future.',
-    features: ['Master Planning', 'Public Realm Design', 'Streetscape Design', 'Community Engagement'],
-    image: '/images/project-urban.png',
-  },
-  {
-    num: '05',
-    title: '3D Visualization',
-    desc: 'Our visualization team brings architectural concepts to life with photorealistic renders and immersive walkthroughs. We help clients and stakeholders experience spaces before a single brick is laid.',
-    features: ['Photorealistic Renders', 'Virtual Walkthroughs', 'Aerial Perspectives', 'Animated Flythroughs'],
-    image: '/images/project-hillside.png',
-  },
-]
+// Services list removed per user request
 
 const process = [
-  { step: '01', title: 'Discovery & Concept', desc: 'We listen deeply to understand your vision, and develop creative concepts that explore possibilities.', image: '/images/process-1.png' },
-  { step: '02', title: 'Design & Build', desc: 'The chosen concept is refined into detailed, buildable documents and we oversee construction to ensure fidelity.', image: '/images/process-2.png' },
-  { step: '03', title: 'Realization', desc: 'We deliver an extraordinary built environment that beautifully transforms your original vision into reality.', image: '/images/process-3.png' },
+  { step: '01', image: '/images/process-1.png' },
+  { step: '02', image: '/images/process-2.png' },
+  { step: '03', image: '/images/process-3.png' },
 ]
 
 export default function Services() {
@@ -74,32 +38,7 @@ export default function Services() {
         delay: 0.8,
       })
 
-      // Service cards — alternate slide directions
-      document.querySelectorAll('.service-card').forEach((card, i) => {
-        const direction = i % 2 === 0 ? -80 : 80
-
-        gsap.from(card.querySelector('.service-card__image-wrapper'), {
-          x: direction,
-          opacity: 0,
-          duration: 1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 75%',
-          }
-        })
-
-        gsap.from(card.querySelector('.service-card__text'), {
-          x: -direction,
-          opacity: 0,
-          duration: 1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 70%',
-          }
-        })
-      })
+      // Removed service-card GSAP animations
 
       // Process - 3D Fan Out Animation
       const processCards = gsap.utils.toArray('.process-step');
@@ -158,31 +97,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services list */}
-      <section className="services-list section" id="services-list">
-        <div className="container">
-          {services.map((service, i) => (
-            <div key={service.num} className={`service-card ${i % 2 !== 0 ? 'service-card--reverse' : ''}`}>
-              <div className="service-card__image-wrapper">
-                <img src={service.image} alt={service.title} className="service-card__image" />
-                <span className="service-card__num">{service.num}</span>
-              </div>
-              <div className="service-card__text">
-                <h2 className="service-card__title">{service.title}</h2>
-                <p className="service-card__desc">{service.desc}</p>
-                <ul className="service-card__features">
-                  {service.features.map((f, j) => (
-                    <li key={j} className="service-card__feature">
-                      <span className="service-card__feature-dot"></span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Services list removed */}
 
       {/* Process */}
       <section className="services-process section" id="services-process">
@@ -197,8 +112,6 @@ export default function Services() {
                 <div className="process-step__overlay"></div>
                 <div className="process-step__content">
                   <span className="process-step__num">{p.step}</span>
-                  <h3 className="process-step__title">{p.title}</h3>
-                  <p className="process-step__desc">{p.desc}</p>
                 </div>
               </div>
             ))}
