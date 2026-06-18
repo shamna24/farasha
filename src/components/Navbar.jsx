@@ -60,13 +60,13 @@ export default function Navbar() {
   return (
     <>
       <nav ref={navRef} className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${isHidden ? 'navbar--hidden' : ''}`} id="main-navbar">
-        <div className="navbar__inner">
+        <div className="navbar__inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center w-full">
           <Link to="/" className="navbar__brand" id="navbar-brand">
             <span className="navbar__brand-name">Farasha</span>
             <span className="navbar__brand-sub">Design Studio</span>
           </Link>
 
-          <div className="navbar__links-desktop">
+          <div className="navbar__links-desktop hidden md:flex items-center gap-8 lg:gap-10">
             {navLinks.map(link => (
               <Link
                 key={link.path}

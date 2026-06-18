@@ -188,8 +188,8 @@ export default function Home() {
     <div ref={heroRef}>
       {/* ===== HERO ===== */}
       <section className="hero section" id="hero-section">
-        <div className="hero__bg">
-          <img src="/images/hero-villa.png" alt="Modern luxury villa" className="hero__bg-image" />
+        <div className="hero__bg overflow-hidden">
+          <img src="/images/hero-villa.png" alt="Modern luxury villa" className="hero__bg-image w-full h-full object-cover" />
           <div className="hero__bg-overlay"></div>
           <div className="hero__bg-grain"></div>
         </div>
@@ -228,8 +228,8 @@ export default function Home() {
       {/* ===== ABOUT PREVIEW ===== */}
       <section ref={aboutRef} className="home-about section" id="home-about-section">
         <div className="container home-about__grid">
-          <div className="home-about__image-wrapper">
-            <img src="/images/project-modern-home.png" alt="Modern architectural work" className="home-about__image" />
+          <div className="home-about__image-wrapper w-full relative overflow-hidden rounded-lg">
+            <img src="/images/project-modern-home.png" alt="Modern architectural work" className="home-about__image w-full h-[400px] md:h-[550px] lg:h-[650px] object-cover max-w-full" />
             <div className="home-about__image-accent"></div>
           </div>
           <div className="home-about__text">
@@ -295,8 +295,8 @@ export default function Home() {
 
           {featuredProjects.map((project, i) => (
             <Link to="/projects" key={project.id} className="home-project-card hover-target">
-              <div className="home-project-card__image-wrapper">
-                <img src={project.image} alt={project.title} className="home-project-card__image" />
+              <div className="home-project-card__image-wrapper overflow-hidden w-full h-full rounded-xl">
+                <img src={project.image} alt={project.title} className="home-project-card__image w-full h-full object-cover max-w-full" />
                 <div className="home-project-card__overlay"></div>
               </div>
               <div className="home-project-card__info">
@@ -320,8 +320,8 @@ export default function Home() {
 
       {/* ===== CTA ===== */}
       <section ref={ctaRef} className="home-cta section" id="home-cta-section">
-        <div className="home-cta__bg">
-          <img src="/images/project-hillside.png" alt="Architecture project" className="home-cta__bg-image" />
+        <div className="home-cta__bg overflow-hidden w-full h-full absolute inset-0">
+          <img src="/images/project-hillside.png" alt="Architecture project" className="home-cta__bg-image w-full h-full object-cover max-w-full" />
           <div className="home-cta__bg-overlay"></div>
         </div>
         <div className="container home-cta__content">

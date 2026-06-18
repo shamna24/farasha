@@ -349,8 +349,9 @@
 }
 
 .home-projects__intro {
-  min-width: 400px;
+  width: 90vw;
   max-width: 400px;
+  min-width: 300px;
   padding-right: var(--space-lg);
 }
 
@@ -366,8 +367,9 @@
 
 .home-project-card {
   position: relative;
-  min-width: 500px;
+  width: 80vw;
   max-width: 500px;
+  min-width: 300px;
   height: 65vh;
   overflow: hidden;
   cursor: pointer;
@@ -566,6 +568,14 @@
 
   .home-stats__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-project-card {
+    min-width: 400px;
+  }
+
+  .home-projects__intro {
+    min-width: 350px;
   }
 }
 

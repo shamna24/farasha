@@ -251,4 +251,5 @@
   .about-values__grid,
   .about-team__grid {
     grid-template-columns: 1fr;
+  }
 }
