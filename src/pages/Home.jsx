@@ -144,18 +144,17 @@ export default function Home() {
       // Projects — horizontal scroll
       const projectsTrack = document.querySelector('.home-projects__track')
       if (projectsTrack) {
-        const scrollWidth = projectsTrack.scrollWidth - window.innerWidth + 200
-
         gsap.to(projectsTrack, {
-          x: -scrollWidth,
+          x: () => -(projectsTrack.scrollWidth - window.innerWidth + 200),
           ease: 'none',
           scrollTrigger: {
             trigger: projectsRef.current,
             start: 'top top',
-            end: () => `+=${scrollWidth}`,
+            end: () => `+=${projectsTrack.scrollWidth - window.innerWidth + 200}`,
             scrub: 1,
             pin: true,
             anticipatePin: 1,
+            invalidateOnRefresh: true,
           }
         })
       }
