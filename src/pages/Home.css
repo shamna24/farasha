@@ -110,11 +110,13 @@
 
 .hero__cta-group {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
   flex-wrap: wrap;
 }
 
-/* Scroll indicator */
+/* Hero scroll indicator */
 .hero__scroll-indicator {
   position: absolute;
   bottom: 8rem;
